@@ -5,6 +5,8 @@ public class Main
 	public void helloProcessing()
 	{
 		String[] a = {"MAIN"};
+		
+		//tell program to run java file named HelloProcessing
         processing.core.PApplet.runSketch( a, new HelloProcessing());
 	}
 
