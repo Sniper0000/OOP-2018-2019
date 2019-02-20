@@ -98,6 +98,66 @@ public class Loops extends PApplet
 	}
 
 
+
+	void loops4()
+	{
+		int numRects = 10;
+		float w = width / (float) numRects;
+		stroke(255);
+		noFill();
+		colorMode(RGB);
+		//boolean b = true;
+
+		for(int i = 0; i < numRects; i ++)
+		{
+			for(int j = 0; j < numRects; j ++)
+			{	
+				//A ? B : C 
+				// if A is true, result got B else result got C
+				int b = (i + j) % 2 == 0 ? 255 : 127;
+				fill(0,0,b);
+				float x = w * i;
+				float y = w * j;
+				rect(x, y, w, w);
+				/*
+				if(b)
+				{
+					fill(0,0,255);
+				}
+				else
+				{
+					fill(0,0,127)
+				}
+				float x = w * j;
+				float y = w * j;
+				rect(x , y, w, w)
+				b = !b;*/
+			}
+		}
+	}
+
+	void loops5()
+	{
+		int numRects = 12;
+		float w = width /(float) numRects;
+		stroke(0,255,0);
+		noFill();
+		colorMode(RGB);
+
+		for(int i = 1; i < (numRects - 1); i ++)
+		{
+			for(int j = 1; j < (numRects - 1); j ++)
+			{
+				noFill();
+				float x = w * i;
+				float y = w * j;
+				rect(x,y,w,w);
+			}
+		}
+
+	}
+
+
 	public void draw()
 	{			
 		background(0);
@@ -110,7 +170,7 @@ public class Loops extends PApplet
 
 		dx ++;
 		dy ++;
-		loops();
-		loops1();
+		//loops();
+		loops5();
 	}
 }

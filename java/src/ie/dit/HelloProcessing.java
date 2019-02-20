@@ -12,7 +12,6 @@ public class HelloProcessing extends PApplet
 	public void setup() {
 	}
 
-<<<<<<< HEAD
 	/*public void draw() {
 		background(0,0,255);//RGB value
 		stroke(255,0,0);
@@ -50,7 +49,6 @@ public class HelloProcessing extends PApplet
 		fill(255);
 		ellipse(x,mouseY,50,50);
 		x ++;
-=======
 	/*
 	public void draw() {
 		background(0, 0, 255);
@@ -61,11 +59,11 @@ public class HelloProcessing extends PApplet
 		ellipse(100, 200, 50, 150); // cx, cy, w, h
 		fill(0, 255, 0);
 		rect(50, 10, 100, 200); // tlx, tly, w, h
-		triangle(10, 10, 100, 90, 200, 200); // vertices	
->>>>>>> 881a2bd49e4bc7d1fb1442cb61f3c24db17f9269
+		triangle(10, 10, 100, 90, 200, 200); // vertices
+		*/	
 	}	
-	*/
 
+	/*
 	int x = 0; // 4 bytes
 	int xx = 2;
 	float f = 0.0f; // 4 bytes
@@ -73,7 +71,7 @@ public class HelloProcessing extends PApplet
 	String s = "Hello";
 	boolean b = (1 == 0);
 	double d = 0; // 8 bytes
-
+	
 	public void draw()
 	{	
 		
@@ -83,4 +81,5 @@ public class HelloProcessing extends PApplet
 		ellipse(x, mouseY, 50, 50);		
 		x ++;
 	}
+	*/
 }
