@@ -1,7 +1,11 @@
 package ie.dit;
 
 import processing.core.PApplet;
+<<<<<<< HEAD
 //import java.util.Arrays;
+=======
+import java.util.Arrays;
+>>>>>>> 19a6f5a99abdf58c9970cdcecdc798dd8322dcac
 
 public class Loops extends PApplet
 {	
@@ -206,6 +210,7 @@ public class Loops extends PApplet
 		}
 	}
 
+<<<<<<< HEAD
 
 
 	void loops4()
@@ -266,6 +271,8 @@ public class Loops extends PApplet
 
 	}
 
+=======
+>>>>>>> 19a6f5a99abdf58c9970cdcecdc798dd8322dcac
 
 	public void draw()
 	{			
