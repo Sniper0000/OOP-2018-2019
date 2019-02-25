@@ -1,0 +1,162 @@
+package ie.dit;
+
+import processing.core.PApplet;
+
+public class Arrays extends PApplet
+{
+    float[] rainFall = {45, 37, 55, 27, 38, 50, 79, 48, 104, 31, 100, 58};
+    String[] months = {"Jan", "Feb", "Mar", "Apr","May","Jun","Jul", 
+                        "Aug", "Sep", "Oct", "Nov", "Dec"};
+
+    //float[] fa = {10,9};
+    float[] colorD  = new float [12];
+    float[] fa = new float [2];  // empty new arrays
+    public void settings()
+    {
+        size(1500,1500);
+    }
+
+    public void setup()
+    {
+        fa[0] = 10;
+        fa[1] = 4;
+        float n = 0;
+        float avg = 0;
+        System.out.println(fa[0]);
+        System.out.println(fa[1]);
+        for(int i = 0; i < rainFall.length; i++)
+        {
+            System.out.println(months[i] + "\t" + rainFall[i]);
+        }
+
+        for(float f:rainFall) // For each loop
+        {
+            System.out.println(f);
+        }
+        float nMax = 0;
+        float nMin =    0;
+        for(int i = 0; i < rainFall.length; i++) // total
+        {
+            n = n + rainFall[i];
+            nMax = max(rainFall);
+            nMin = min(rainFall);
+            
+        }
+
+        avg = n / (float) rainFall.length;
+        System.out.println("Total" + "\t" + n);
+        System.out.println("Average" + "\t" + avg);
+        System.out.println("Max: " +nMax +" Min: "+ nMin);
+
+        float max = rainFall[0];
+        int maxIndex = -1;
+        for (int i = 0; i < rainFall.length; i ++)
+        {
+            if (rainFall[i] > max)
+            {
+                max = rainFall[i];
+                maxIndex = i;
+            }
+        }
+        max = Float.MIN_VALUE;
+        for (int i = 0; i < rainFall.length; i ++)
+        {
+            if (rainFall[i] > max)
+            {
+                max = rainFall[i];
+                maxIndex = i;
+            }
+        }
+        System.out.println ( months[maxIndex]
+                            + " had the highest rainfall of "
+                            + rainFall[maxIndex]);
+        float min = Float.MAX_VALUE;
+        int minIndex = -1;
+        for (int i = 0; i < rainFall.length; i++)
+        {
+            if (rainFall[i] < min)
+            {
+                min = rainFall[i];
+                minIndex = i;
+            }
+        }
+        System.out.println ( months[minIndex]
+                            + " had the lowest rainfall of "
+                          + rainFall[minIndex]);
+
+       
+        
+        for(int i = 0; i < colorD.length; i++)
+        {
+            float n2 = random(255);
+            colorD[i] = n2;
+        }
+    }
+    
+    public void dBarchart() {
+		int lines = 0;
+		int n = 255 / 12;
+        int n1 = 0;
+        
+		float gap = height / (float) rainFall.length;
+		colorMode(HSB);
+		noStroke();
+		while (lines < rainFall.length) {
+			float x = gap * lines;
+            
+			fill( colorD [lines], 255, 255);
+            rect(0, x, rainFall[lines]*4, gap);
+            fill(0);
+            text(months[lines], 5, x + gap/2 );
+			n1 = n1 + n;
+			lines++;
+        }
+        
+        
+    }
+    public void dFrequencyC()
+    {
+        int dx1 = 50 *3;
+        int dy1 = 450*3; 
+        int dx2 = 450*3;
+        stroke(200);
+        line(dx1,dx1,dx1,dy1);
+        line(dx1,dy1,dx2,dy1);
+        int lines = 16;
+        float gap = (dy1 - dx1) / (float) (lines-1);
+        float unitG = gap / 10;        
+        for (int i = 0 ; i < lines; i++ )
+        {
+            line(dx1 - 10, dy1 - gap * i, dx1, dy1 - gap * i);
+            text(str(i)+ "0",dx1 - 30, dy1 - gap * i);
+            textAlign(LEFT,CENTER);
+
+        }
+        lines = 12;
+        gap = (dy1 - dx1) / (float) (lines-1);
+        colorMode(HSB);
+        for (int i = 0 ; i < lines; i++ )
+        {
+            fill(200);
+            line(dx1 + gap * i, dy1, dx1 + gap * i, dy1 + 10);
+            text(months[i],dx1 + gap * i, dy1 + 25);
+            textAlign(CENTER, TOP);
+            stroke(125,255,255);
+            if (i < lines - 1){
+                line(dx1 + gap * i, dy1 - rainFall[i] * unitG, dx1 + gap * (i+1),dy1 - rainFall[i+1] * unitG);
+            }
+            
+
+        }
+
+
+    }
+    public void draw()
+    {
+        //int m = mouseY / rainFall.length / height;
+        fill(200);
+        //text( rainFall[m], 400, 300);
+        background(0);
+        dFrequencyC();
+    }
+}
