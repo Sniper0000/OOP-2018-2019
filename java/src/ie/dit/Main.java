@@ -30,7 +30,6 @@ public class Main
         processing.core.PApplet.runSketch( a, new Arrays());
 		
 	}
-<<<<<<< HEAD
 
 	public void lab4()
 	{
@@ -42,23 +41,11 @@ public class Main
 	{
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new StarMap());
-=======
-	
-	public void starMap()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new StarMap());
-		
->>>>>>> 2463b2be8917749d4f351bb20f410a3ba554f29c
 	}
 
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-<<<<<<< HEAD
-		main.starMap();						
-=======
 		main.starMap();			
->>>>>>> 2463b2be8917749d4f351bb20f410a3ba554f29c
 	}
 }
