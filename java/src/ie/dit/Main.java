@@ -30,24 +30,22 @@ public class Main
         processing.core.PApplet.runSketch( a, new Arrays());
 		
 	}
-<<<<<<< HEAD
 
 	public void lab4()
 	{
 		String[] a = {"MAIN"};
 		processing.core.PApplet.runSketch( a, new lab4());
 	}
-=======
->>>>>>> 19a6f5a99abdf58c9970cdcecdc798dd8322dcac
 
-	
+	public void starMap()
+	{
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new StarMap());
+	}
+
 	public static void main(String[] args)
 	{
 		Main main = new Main();
-<<<<<<< HEAD
-		main.lab4();			
-=======
-		main.arrays();			
->>>>>>> 19a6f5a99abdf58c9970cdcecdc798dd8322dcac
+		main.starMap();						
 	}
 }
