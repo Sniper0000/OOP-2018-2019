@@ -7,6 +7,9 @@ import processing.data.Table;
 import processing.data.TableRow;
 
 public class StarMap extends PApplet {
+
+    int 
+
     public void settings() {
         size(500, 500);
     }
@@ -55,9 +58,11 @@ public class StarMap extends PApplet {
         }
     }
 
-    public void drawStars() {
+    public void drawStars() 
+    {
         textAlign(LEFT, CENTER);
-        for (Star s : stars) {
+        for (Star s : stars) 
+        {
             float x = map(s.getxG(), -5, 5, border, width - border);
             float y = map(s.getyG(), -5, 5, border, height - border);
 
@@ -74,11 +79,34 @@ public class StarMap extends PApplet {
         }
     }
 
-    public void mousePressed() {
+    public void mouseClicked() 
+    {
+        Star s = stars.get(i);
+        float x = map(s.getxG(), -5, 5, border, width - border);
+        float y = map(s.getyG(), -5, 5, border, height - border);
+
+        for(int i = 0; i < stars.size(); i ++)
+        {
+
+            if(dist(mouseX,mouseY,x,y) < s.getAbsMag() / 2)
+            {
+                if(selected1 == - 1)
+                {
+                    selected1 = i;
+                    break;
+                }
+                if(selected2 == - 1)
+                {
+                    selected2 = i;
+                    break;
+                }
+            }
+        }
         // mouseX, mouseY;
     }
 
-    public void draw() {
+    public void draw() 
+    {
         background(0);
         drawGrid();
         drawStars();
