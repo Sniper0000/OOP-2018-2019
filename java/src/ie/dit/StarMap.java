@@ -6,46 +6,59 @@ import processing.core.PApplet;
 import processing.data.Table;
 import processing.data.TableRow;
 
-public class StarMap extends PApplet {
+public class StarMap extends PApplet
+{
 
-    int 
+    int selected1 = -1;
+    int selected2 = -1;
 
-    public void settings() {
+    public void settings()
+    {
         size(500, 500);
     }
 
-    public void setup() {
+    public void setup()
+    {
         loadData();
         printStars();
         border = width * 0.05f;
     }
 
-    public void loadData() {
+    public void loadData()
+    {
         Table table = loadTable("HabHYG15ly.csv", "header");
-
+        
         /*
-         * for(int i = 0 ; i < table.getRowCount() ; i ++) { TableRow row =
-         * table.getRow(i); System.out.println(row.getString("Display Name"));
-         * System.out.println(row.getString("Hab?")); }
-         */
+        for(int i = 0 ; i < table.getRowCount() ; i ++)
+        {
+            TableRow row = table.getRow(i);
+            System.out.println(row.getString("Display Name"));
+            System.out.println(row.getString("Hab?"));            
+        }
+        */
 
-        for (TableRow row : table.rows()) {
+        for(TableRow row:table.rows())
+        {
             Star star = new Star(row);
-            stars.add(star);
+            stars.add(star);     
         }
     }
 
-    public void printStars() {
-        for (Star star : stars) {
+    public void printStars()
+    {
+        for(Star star:stars)
+        {
             System.out.println(star);
         }
     }
 
     float border;
 
-    private void drawGrid() {
+    private void drawGrid()
+    {
         textAlign(CENTER, CENTER);
-        for (int i = -5; i <= 5; i++) {
+        for(int i = -5 ; i <= 5 ; i ++)
+        {
             float x = map(i, -5, 5, border, width - border);
             stroke(0, 0, 255);
             line(x, border, x, height - border);
@@ -53,15 +66,15 @@ public class StarMap extends PApplet {
             text(i, x, border / 2);
             stroke(0, 0, 255);
             line(border, x, width - border, x);
-            fill(255);
+            fill(255);            
             text(i, border / 2, x);
         }
     }
 
-    public void drawStars() 
+    public void drawStars()
     {
         textAlign(LEFT, CENTER);
-        for (Star s : stars) 
+        for(Star s:stars)
         {
             float x = map(s.getxG(), -5, 5, border, width - border);
             float y = map(s.getyG(), -5, 5, border, height - border);
@@ -75,37 +88,18 @@ public class StarMap extends PApplet {
             line(x - 5, y, x + 5, y);
             fill(255);
             text(s.getDisplayName(), x + 20, y);
+            
+            
 
         }
-    }
+    } 
 
-    public void mouseClicked() 
+    public void mouseClicked()
     {
-        Star s = stars.get(i);
-        float x = map(s.getxG(), -5, 5, border, width - border);
-        float y = map(s.getyG(), -5, 5, border, height - border);
-
-        for(int i = 0; i < stars.size(); i ++)
-        {
-
-            if(dist(mouseX,mouseY,x,y) < s.getAbsMag() / 2)
-            {
-                if(selected1 == - 1)
-                {
-                    selected1 = i;
-                    break;
-                }
-                if(selected2 == - 1)
-                {
-                    selected2 = i;
-                    break;
-                }
-            }
-        }
-        // mouseX, mouseY;
+            
     }
 
-    public void draw() 
+    public void draw()
     {
         background(0);
         drawGrid();
