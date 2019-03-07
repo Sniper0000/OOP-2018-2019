@@ -24,7 +24,22 @@ Resources
 - End of Year exam - 50%
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+# Week 6 - More on classes & ArrayLists & the map function
+- [map](https://processing.org/reference/map_.html)
+
+## Lab
+### Learning Outcomes
+- Know how to make a class with private fields, accessors and a constructor
+- Know how to load a CSV file
+- Know how to iterate over an arraylist
+- Get some practice for your upcoming lab test
+
+Try [this lab test](https://github.com/skooter500/OOP_Labtest1_2017_Starter) from last year
+
+>>>>>>> b89905576c4baf68a1199042a33430279da6890e
 # Week 5 - Classes & ArrayLists
 
 - [2016 Lab test](https://github.com/skooter500/OOP-LabTest1-2016)
