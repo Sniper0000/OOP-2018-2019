@@ -26,9 +26,17 @@ Resources
 <<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 =======
 =======
+=======
+# Week 8 - No class due to bank holiday
+
+## Lab
+Work on your assignment
+
+>>>>>>> c1ae9d34e1cde2c9526f3423de14b64d3852b5b2
 # Week 7 - Making a Ship class for the YASC game
 - [Download YASC on Itch with full source code](https://skooter500.itch.io/yasc)
 - [Classes in Java](https://docs.oracle.com/javase/tutorial/java/javaOO/classes.html)

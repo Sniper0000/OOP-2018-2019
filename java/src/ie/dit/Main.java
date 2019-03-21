@@ -1,5 +1,7 @@
 package ie.dit;
 
+import processing.core.PVector;
+
 public class Main
 {	
 
@@ -66,6 +68,7 @@ public class Main
 
 	public static void main(String[] args)
 	{
+<<<<<<< HEAD
 		PVector a = new PVector(0,5);
 		PVector b = new PVector(10,-2);
 		PVector c = new PVector();
@@ -75,7 +78,25 @@ public class Main
 		//c = a + b;
 		c = PVector.add(a,b);
 
+=======
+
+		PVector a = new PVector(0, 5);
+		PVector b = new PVector(10, -2);
+		PVector c = new PVector();
+
+		// a += b;
+		a.add(b);
+		// c = a + b;
+		c = PVector.add(a, b);
+		// static method call, on the class not the instance
+		c.normalize();
+		c.mag(); 
+
+		
+>>>>>>> c1ae9d34e1cde2c9526f3423de14b64d3852b5b2
 		Main main = new Main();
-		main.audio1();			
+		main.yasc();		
+		
+		
 	}
 }
