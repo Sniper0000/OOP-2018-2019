@@ -1,9 +1,9 @@
 package ie.dit;
 
 import java.util.ArrayList;
-
 import processing.core.PApplet;
-import processing.data.*;
+import processing.data.Table;
+import processing.data.TableRow;
 
 public class CafeRubis extends PApplet
 {
