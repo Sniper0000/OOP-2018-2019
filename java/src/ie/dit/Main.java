@@ -68,17 +68,6 @@ public class Main
 
 	public static void main(String[] args)
 	{
-<<<<<<< HEAD
-		PVector a = new PVector(0,5);
-		PVector b = new PVector(10,-2);
-		PVector c = new PVector();
-
-		//a += b;
-		a.add(b);
-		//c = a + b;
-		c = PVector.add(a,b);
-
-=======
 
 		PVector a = new PVector(0, 5);
 		PVector b = new PVector(10, -2);
@@ -93,7 +82,6 @@ public class Main
 		c.mag(); 
 
 		
->>>>>>> c1ae9d34e1cde2c9526f3423de14b64d3852b5b2
 		Main main = new Main();
 		main.yasc();		
 		
