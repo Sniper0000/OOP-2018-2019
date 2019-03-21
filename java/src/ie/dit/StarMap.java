@@ -32,16 +32,17 @@ public class StarMap extends PApplet
 
         System.out.println(map1(0, -100, 200, 100, 500));
 
+        //Testing an array list
         Star s = new Star();
         s.setDisplayName("DIT");
         stars.add(s);
 
-        Star s1 = stars.get(0);
+        Star s1 = stars.get(stars.size() - 1);
 
         s1.setDisplayName("TU Dublin");
 
         System.out.println(s);
-        System.out.println(stars.get(0));
+        System.out.println(stars.size() - 1);
         System.out.println(s1);
     }
 
