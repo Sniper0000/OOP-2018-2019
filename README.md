@@ -22,11 +22,6 @@ Resources
 - Week 11 Lab Test 20% 
 - Week 12 Assignment Submission - 30%
 - End of Year exam - 50%
-
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
-<<<<<<< HEAD
 =======
 =======
 =======
