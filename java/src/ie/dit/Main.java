@@ -66,6 +66,15 @@ public class Main
 
 	public static void main(String[] args)
 	{
+		PVector a = new PVector(0,5);
+		PVector b = new PVector(10,-2);
+		PVector c = new PVector();
+
+		//a += b;
+		a.add(b);
+		//c = a + b;
+		c = PVector.add(a,b);
+
 		Main main = new Main();
 		main.audio1();			
 	}

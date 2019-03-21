@@ -27,7 +27,7 @@ public class CafeRubis extends PApplet
 
     public void mouseClicked()
     {
-
+        
     }
 
     void drawProductButton()
