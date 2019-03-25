@@ -62,7 +62,7 @@ public class Main
 	public void audio1()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Audio1());
+        processing.core.PApplet.runSketch( a, new Audio1());dw
 		
 	}
 

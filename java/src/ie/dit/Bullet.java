@@ -36,7 +36,25 @@ public class Bullet
 
         // pos += forward * speed
         pos.add(PVector.mult(forward, speed));
+
+        if(pos.x < 0)
+        {
+            pos.x = yasc.width;
+        }
+        if(pos.x > yasc.width)
+        {
+            pos.x = 0;
+        }
+        if (pos.y < 0) {
+            pos.y = yasc.height;
+        }
+        if (pos.y > yasc.height) {
+            pos.y = 0;
+        }
+        
     }
+
+    float alive;    
 
     /**
      * @return the pos

@@ -103,7 +103,7 @@ public class AIShip
     /**
      * @return the size
      */
-    public float getSize() {
+    public float getSize() {*
         return size;
     }
 
