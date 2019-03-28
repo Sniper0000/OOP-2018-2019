@@ -21,7 +21,7 @@ public class AIShip
     {
         this.yasc = yasc;
         pos = new PVector(x, y);
-        forward = new PVector(0, -1);
+        setForward(new PVector(0, -1));
         this.speed = speed;
         this.size = size;
 
@@ -31,7 +31,21 @@ public class AIShip
         }
     }
 
-    public void render()
+    /**
+	 * @return the forward
+	 */
+	public PVector getForward() {
+		return forward;
+	}
+
+	/**
+	 * @param forward the forward to set
+	 */
+	public void setForward(PVector forward) {
+		this.forward = forward;
+	}
+
+	public void render()
     {
         yasc.pushMatrix();
         yasc.translate(pos.x, pos.y);
@@ -103,7 +117,7 @@ public class AIShip
     /**
      * @return the size
      */
-    public float getSize() {*
+    public float getSize() {
         return size;
     }
 

@@ -1,29 +1,30 @@
 package ie.dit;
 
-import processing.core.PVector;
+//import processing.core.PVector;
 
-public class Main
-{	
+public class Main {
 
-	public void helloProcessing()
-	{
-		String[] a = {"MAIN"};
-		
-		//tell program to run java file named HelloProcessing
-        processing.core.PApplet.runSketch( a, new HelloProcessing());
-	}
-	
-	public void bugZap()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new BugZap());
+	public void helloProcessing() {
+		String[] a = { "MAIN" };
+
+		// tell program to run java file named HelloProcessing
+		processing.core.PApplet.runSketch(a, new HelloProcessing());
 	}
 
-	public void loops()
-	{
-		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Loops());
-		
+	public void bugZap() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new BugZap());
+	}
+
+	public void loops() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new Loops());
+
+	}
+
+	public void looptest() {
+		String[] a = { "MAIN" };
+		processing.core.PApplet.runSketch(a, new LoopTest());
 	}
 	
 	public void arrays()
@@ -62,13 +63,13 @@ public class Main
 	public void audio1()
 	{
 		String[] a = {"MAIN"};
-        processing.core.PApplet.runSketch( a, new Audio1());dw
+        processing.core.PApplet.runSketch( a, new Audio1());
 		
 	}
 
 	public static void main(String[] args)
 	{
-
+		/*
 		PVector a = new PVector(0, 5);
 		PVector b = new PVector(10, -2);
 		PVector c = new PVector();
@@ -81,9 +82,9 @@ public class Main
 		c.normalize();
 		c.mag(); 
 
-		
+		*/
 		Main main = new Main();
-		main.yasc();		
+		main.looptest();		
 		
 		
 	}

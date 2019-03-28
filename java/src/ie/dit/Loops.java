@@ -9,7 +9,8 @@ public class Loops extends PApplet
 		size(500, 500);
 	}
 
-	public void setup() {
+	public void setup() 
+	{
 		dx = 0;
 		dy = 0;
 		cx = width / 2;
