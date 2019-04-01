@@ -22,8 +22,6 @@ Resources
 - Week 11 Lab Test 20% 
 - Week 12 Assignment Submission - 30%
 - End of Year exam - 50%
-<<<<<<< HEAD
-=======
 =======
 =======
 =======
@@ -45,7 +43,6 @@ Try and implement the following ideas:
 
 Add inheritance and polymorphism to your assignment
 
->>>>>>> 51acfd7ae55f1ba358822aa7cc2102e3144503d0
 # Week 8 - No class due to bank holiday
 
 ## Lab
