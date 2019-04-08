@@ -73,6 +73,13 @@ public class Main {
         processing.core.PApplet.runSketch( a, new Mandala());
 		
 	}
+	
+	public void audio2()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Audio2());
+		
+	}
 
 	public void audio2() {
 		String[] a = { "MAIN" };
