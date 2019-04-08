@@ -23,13 +23,23 @@ public class Audio2 extends PApplet
 
     }
 
-    public void draw()
+    float lerpedAverage = 0;
+
+    public void draw() 
     {
+        colorMode(HSB);
+        background(0);
         float halfH = height / 2;
-        stroke(255);
-        for(int i = 0; i < ai.bufferSize(); i ++)
+        float total = 0;
+        for (int i = 0; i < ai.bufferSize(); i++) 
         {
-            line(i, halfH, i, halfH + ai.left.get(i));
+            stroke(map(i, 0, FRAME_SIZE, 0,255),255,255);
+            line(i, halfH, i, halfH + ai.left.get(i) * halfH);
+            total += (float) Math.abs(ai.left.get(i));
         }
+        float average = total / (float) FRAME_SIZE;
+        noStroke();
+        fill(map(average, 0 ,1, 0, 255), 255, 255);
+        ellipse(width / 2, 100, average * 400, average * 400);  
     }
 }
