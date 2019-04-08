@@ -67,6 +67,7 @@ public class Main {
 		
 	}
 
+<<<<<<< HEAD
 	public void audio2() {
 		String[] a = { "MAIN" };
 		processing.core.PApplet.runSketch(a, new Audio2());
@@ -91,5 +92,20 @@ public class Main {
 		Main main = new Main();
 		main.yasc();
 		
+=======
+	public void mandala()
+	{
+		String[] a = {"MAIN"};
+        processing.core.PApplet.runSketch( a, new Mandala());
+		
+	}
+
+	public static void main(String[] args)
+	{
+	
+		Main main = new Main();
+		main.mandala();		
+			
+>>>>>>> 2d03505c2ccebd93c7cf38190820626d328a148f
 	}
 }
